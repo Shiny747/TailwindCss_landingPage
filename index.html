@@ -7,16 +7,52 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css" />
 	<!-- 
-			Во время разработки вы можете использоваться cdn для более быстрого отклика после изменения стилей
-			<script src="https://cdn.tailwindcss.com"></script>
-		-->
+		Во время разработки вы можете использоваться cdn для более быстрого отклика после изменения стилей
+			<script src="https://cdn.tailwindcss.com"></script> -->
 	<title>Document</title>
 </head>
 
 <body>
-	<header class="flex justify-between items-center  px-[10%] lg:py-[35px] lg:mb-[80px] mb-[40px]">
+	<header class="sticky top-0 bg-white mb-[50px] px-2 3xm:px-5 2xm:px-10 xm:px-20 md:hidden">
+		<div class="flex justify-between items-center">
+			<a class="font-medium p-2 text-2xl" href="#">HelloUI</a>
+			<ul id="menu"
+				class="hidden fixed top-0 right-0 px-10 py-10 mb-[20px] bg-gray-800 z-50 text-base sm:text-xl">
+				<li class="z-90 fixed top-2 right-2 3xm:top-4 3xm:right-4 2xm:top-4 2xm:right-10">
+					<a href="javascript:void(0)" class="text-right text-white text-[35px]"
+						onclick="toggleMenu()">&times;</a>
+				</li>
+				<li class="m-[20px] mt-[30px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Docs</a>
+				</li>
+				<li class="m-[20px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Tools</a>
+				</li>
+				<li class="m-[20px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Features</a>
+				</li>
+				<li class="m-[20px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Pricing</a>
+				</li>
+				<li class="m-[20px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Jobs</a>
+				</li>
+				<li class="m-[20px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Sing in</a>
+				</li>
+				<li class="m-[20px] justify-center text-center">
+					<a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Try for Free</a>
+				</li>
+			</ul>
+			<!-- This is used to open the menu on mobile devices -->
+			<div class="flex items-center p-2">
+				<button class="text-black text-[36px] font-bold hover:opacity-100 duration-300" onclick="toggleMenu()">
+					&#9776;
+				</button>
+	</header>
+	<nav class="2md:hidden flex justify-between items-center mt-5 px-[10%] lg:py-[35px] lg:mb-[80px] mb-[40px]">
 		<span class="font-medium text-2xl lg:text-4xl">Hello UI</span>
-		<nav>
+		<div>
 			<ul class="flex flex-col gap-y-1 items-center md:flex-row md:gap-x-5 lg:gap-x-[50px]">
 				<li><a href="#">Docs</a></li>
 				<li><a href="#">Tools</a></li>
@@ -24,38 +60,53 @@
 				<li><a href="#">Pricing</a></li>
 				<li><a href="#">Jobs</a></li>
 			</ul>
-		</nav>
-		<div class="flex items-center gap-x-4 lg:gap-x-[35px]">
+		</div>
+		<div class="flex items-center gap-x-4 ">
 			<a href="#">Sing In</a>
 			<button
 				class="bg-main-blue text-white rounded-full px-[17px] py-[6px] border-2 border-main-blue hover:bg-white hover:text-main-blue hover:border-2 hover:border-main-blue transition-all lg:px-[35px] lg:py-[13px]">Try
 				for Free</button>
 		</div>
-	</header>
+	</nav>
 	<main class="px-[10%]">
-		<section class="flex flex-col items-center justify-center mb-[100px]">
-			<h1 class="text-8xl font-black text-center max-w-[953px] mb-[35px]">Grow up your sells with us</h1>
-			<p class="text-center max-w-[700px] mb-[40px] text-[#5b5e6d] text-2xl">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, officia! Sequi accusamus veniam
-				incidunt numquam, ullam voluptatem officiis!
+		<section class="flex flex-col items-center justify-center mb-[50px] ">
+			<h1
+				class="text-3xl font-black text-center mb-[15px] max-w-[300px] 2md:text-4xl lg:text-6xl lg:max-w-[653px] lg:mb-[50px]">
+				Grow
+				up your sells
+				with us
+			</h1>
+			<p
+				class="text-center mb-[30px] text-[#5b5e6d] text-sm 2md:text-base lg:text-2xl lg:mb-[50px] lg:max-w-[653px]">
+				Build one
+				project that runs
+				natively
+				on all your term now
+				users' devices to turn for that you can do.
 			</p>
-			<div class="flex mb-[100px] gap-x-5">
+			<div class="flex mb-[50px] gap-x-5">
 				<button
-					class="bg-main-blue text-white rounded-full px-[35px] py-[13px] border-2 border-main-blue hover:bg-white hover:text-main-blue hover:border-2 hover:border-main-blue transition-all">Try
+					class="bg-main-blue text-white rounded-full  border-2 border-main-blue hover:bg-white hover:text-main-blue hover:border-2 hover:border-main-blue transition-all px-[7px] py-[3px] 3xm:px-[15px] 3xm:py-[7px] sm:px-[25px] sm:py-[8px] lg:px-[35px] lg:py-[13px]">Try
 					for Free</button>
 				<button
-					class="bg-white text-main-blue shadow-md shadow-[#80c9fd4d] rounded-full px-[35px] py-[13px] ">Discover
+					class="bg-white text-main-blue shadow-md shadow-[#80c9fd4d] rounded-full px-[7px] py-[3px] 3xm:px-[15px] 3xm:py-[7px] sm:px-[25px] sm:py-[8px] lg:px-[35px] lg:py-[13px]">Discover
 					in Video</button>
 			</div>
 			<div class="flex flex-row justify-center items-center">
-				<img src="img/Group 5.svg" alt="some figures first group">
-				<img src="img/download1.jpg" alt="Privory app Screenshots">
-				<img src="img/Group 6.svg" class="ml-[10px]" alt="some figures second group">
+				<img class="2lg:hidden lg:w-[100px]" src="img/Group 5.svg" alt="some figures first group">
+				<img class="px-2" src="img/download1.jpg" alt="Privory app Screenshots">
+				<img class="2lg:hidden ml-[10px] lg:w-[100px]" src="img/Group 6.svg" alt="some figures second group">
 			</div>
 		</section>
 		<section class="flex flex-col justify-center items-center">
-			<h2 class="text-[#5B5E6D] mb-8">More than 1.8 million people across 50,000 companies choose Spellon</h2>
-			<div class="flex  items-center justify-between  w-[900px] ">
+			<h2 class="text-[#5B5E6D] text-sm mb-[50px] text-center 2xm:text-base">More than 1.8 million people
+				across
+				50,000
+				companies
+				choose Spellon
+			</h2>
+			<div
+				class="flex flex-col items-center gap-y-[50px] sm:grid sm:grid-cols-2 sm:justify-items-center sm:gap-x-[50px] md:grid-cols-3 lgg:flex lgg:flex-row lgg:justify-between">
 				<img src="img/jll-black 1.svg" alt="JLL company">
 				<img src="img/netflix-black 1.svg" alt="Netflix company">
 				<img src="img/hubspot-black 1.svg" alt="Hubspot company">
@@ -63,127 +114,164 @@
 				<img src="img/juniper-networks-black 1.svg" alt="Juniper company">
 				<img src="img/lacoste-black 1.svg" alt="Lacoste company">
 			</div>
+			<hr class="w-[80%] text-[#5b5e6d] my-[50px]">
 		</section>
-		<hr class="w-[100%] text-[#5b5e6d] mt-[100px] mb-[100px]">
-		<section class="flex flex-col justify-center items-center">
-			<h2 class="w-[900px] text-[42px] text-center font-bold mb-8">Award-winning logistics
+		<section class="flex flex-col justify-center items-center mb-[50px]">
+			<h2
+				class="text-[18px] font-bold text-center w-[300px] mb-[15px] 2xm:text-[20px] xm:w-[500px] xm:text-[24px] lg:w-[600px] lg:text-[36px] lgg:text-[42px] lgg:w-[895px]">
+				Award-winning
+				logistics
 				services.Powered by
 				technology, delivered by experts.</h2>
-			<p class="w-[780px] text-[20px] text-[#5b5e6d] text-center font-normal mb-[50px] ">Businesses are leaving
+			<p class="text-center mb-[50px] text-[#5b5e6d] text-sm  2xm:text-base lg:text-2xl lg:max-w-[653px]">
+				Businesses are
+				leaving
 				money on the
 				table every day
 				due to
 				missed supply chain
 				opportunities. Zencargo
-				unlocks your potential with digital freight forwarding that drives cost savings and revenue improvements
+				unlocks your potential with digital freight forwarding that drives cost savings and revenue
+				improvements
 				for your business.</p>
 			<button
 				class="bg-[#0555FF1A] rounded-full text-blue-700 text-base text-[15px] py-2 pl-[25px] pr-[25px] items-center"><span
 					class="bg-white rounded-full px-[10px] py-[2px] mr-[13px]">!</span>See How Spellon Work</button>
 		</section>
-		<section class="flex flex-col mt-[150px] justify-center">
-			<div class="flex flex-row float-left justify-between">
-				<div class="flex flex-col justify-center  items-start w-[500px] mb-[150px]">
-					<h2 class="text-[72px] text-left font-bold mb-8">Develop</h2>
-					<p class="w-[450px] text-[20px] text-[#5b5e6d] text-left font-normal mt-[30px] mb-[40px]">Develop
+		<section class="flex flex-col justify-center items-center">
+			<div
+				class="flex flex-col justify-center items-center mb-[50px] lg:flex-row lg:float-left lg:justify-between  ">
+				<img class="w-fit md:w-[400px] lg:w-[500px] lgg:w-[600px]" src="img/Group 7.jpg"
+					alt="Man sitting in front of a computer ">
+				<div class="flex flex-col justify-center text-center lg:w-[500px]">
+					<h2 class="text-3xl font-black text-center mb-[15px] xm:text-4xl lg:text-left">Develop</h2>
+					<p
+						class="text-center mb-[15px] text-[#5b5e6d] text-[14px]  2xm:text-[16px] lg:text-left lg:w-[300px] lg:text-[20px] lgg:w-[450px]">
+						Develop
 						for all
 						your users' devices with just one codebase. Add fast refresh, true native
 						capabilities, and your creativity, and you'll have the app your users want in no time.
 					</p>
-					<a class="text-lg font-medium underline decoration-2 underline-offset-4 decoration-main-blue"
+					<a class="text-sm font-medium underline decoration-2 underline-offset-4 decoration-main-blue 2xm:text-base lg:text-left"
 						href="#">Learn
 						more about spellon</a>
 				</div>
-				<img class="w-[600px]" src="img/Group 7.svg" alt="Man sitting in front of a computer ">
 			</div>
-			<div class="flex flex-row-reverse justify-between float-right mb-[150px]">
-				<div class="flex flex-col justify-center  items-start w-[500px]">
-					<h2 class="text-[72px] text-left font-bold mb-8">Build</h2>
-					<p class="w-[450px] text-[20px] text-[#5b5e6d] text-left font-normal mt-[30px] mb-[40px]">Develop
+			<div
+				class="flex flex-col justify-center items-center mb-[50px] lg:flex-row-reverse lg:float-right lg:justify-between ">
+				<img class="w-fit md:w-[400px] lg:w-[500px] lgg:w-[600px]" src="img/Group 9.jpg"
+					alt="Man sitting in front of a computer ">
+				<div class="flex flex-col justify-center text-center lg:w-[500px]">
+					<h2 class="text-3xl font-black text-center mb-[15px] xm:text-4xl lg:text-left">Build</h2>
+					<p
+						class="text-center mb-[15px] text-[#5b5e6d] text-[14px]  2xm:text-[16px] lg:text-left lg:w-[300px] lg:text-[20px] lgg:w-[450px]">
+						Develop
 						for all
 						your users' devices with just one codebase. Add fast refresh, true native
 						capabilities, and your creativity, and you'll have the app your users want in no time.
 					</p>
-					<a class="text-lg font-medium underline decoration-2 underline-offset-4 decoration-main-blue"
+					<a class="text-sm font-medium underline decoration-2 underline-offset-4 decoration-main-blue 2xm:text-base lg:text-left"
 						href="#">Learn
 						more about spellon</a>
 				</div>
-				<img class="w-[600px]" src="img/Group 9.svg" alt="Laptop and coffee ">
 			</div>
-			<div class="flex flex-row float-left justify-between ">
-				<div class="flex flex-col justify-center  items-start w-[500px] mb-[130px]">
-					<h2 class="text-[72px] text-left font-bold mb-8">Update</h2>
-					<p class="w-[450px] text-[20px] text-[#5b5e6d] text-left font-normal mt-[30px] mb-[40px]">Develop
+			<div
+				class="flex flex-col justify-center items-center mb-[50px] lg:flex-row lg:float-left lg:justify-between ">
+				<img class="w-fit md:w-[400px] lg:w-[500px] lgg:w-[600px]" src="img/Group 12.jpg"
+					alt="Man sitting in front of a computer ">
+				<div class="flex flex-col justify-center text-center lg:w-[500px]">
+					<h2 class="text-3xl font-black text-center mb-[15px] xm:text-4xl lg:text-left">Update</h2>
+					<p
+						class="text-center mb-[15px] text-[#5b5e6d] text-[14px]  2xm:text-[16px] lg:text-left lg:w-[300px] lg:text-[20px] lgg:w-[450px]">
+						Develop
 						for all
 						your users' devices with just one codebase. Add fast refresh, true native
 						capabilities, and your creativity, and you'll have the app your users want in no time.
 					</p>
-					<a class="text-lg font-medium underline decoration-2 underline-offset-4 decoration-main-blue"
+					<a class="text-sm font-medium underline decoration-2 underline-offset-4 decoration-main-blue 2xm:text-base lg:text-left"
 						href="#">Learn
 						more about spellon</a>
 				</div>
-				<img class="w-[600px]" src="img/Group 12.svg" alt="Phone ">
 			</div>
 		</section>
 	</main>
 	<footer class="flex justify-center text-white">
-		<div class="flex flex-col bg-[url('img/Frame.jpg')] bg-no-repeat bg-center w-full">
-			<div class="flex justify-center items-center flex-col mb-[150px]">
-				<h2 class="text-[72px] font-bold mb-10 justify-center text-center w-[650px] mt-[130px]">It’s easy to get
-					started. Start now.</h2>
-				<div class="flex flex-row">
+		<div class="flex flex-col bg-[url('img/Frame.jpg')] bg-no-repeat bg-center w-full ">
+			<div class="flex justify-center items-center flex-col mb-[50px] lgg:mb-[0px]">
+				<h2
+					class="text-[24px] font-bold text-center mb-[50px] mt-[50px] md:text-[30px] lg:w-[650px] lg:text-[52px] lg:mt-[70px] lgg:text-[72px] lgg:mt-[130px]">
+					It’s easy to get started.Start now.
+				</h2>
+				<div class="flex flex-row text-xs 3xm:text-sm 2xm:text-base md:text-xl lgg:mb-[150px]">
 					<input
-						class="py-[25px] pr-[300px] pl-[30px] text-2xl rounded-l-xl bg-transparent border-2 border-[#FFFFFF7F] border-r-main-blue"
+						class="py-[2px] pr-[20px] pl-[10px] rounded-l-xl bg-transparent border-[1px] border-[#FFFFFF7F] border-r-main-blue 2md:py-[10px] 2md:pr-[30px] 2md:pl-[25px] md:py-[25px] md:pl-[30px] md:pr-[100px] lg:pr-[250px] lgg:pr-[300px] "
 						type="text" placeholder="Enter your email">
-					<input class="py-[25px] px-[50px] rounded-r-xl bg-main-blue text-2xl" type="submit"
-						value="Get Started">
+					<input
+						class="py-[2px] px-[10px] rounded-r-xl bg-main-blue 2md:py-[5px] md:py-[10px] md:px-[20px]  lg:py-[15px] lg:px-[25]"
+						type="submit" value="Get Started">
 				</div>
 			</div>
-			<div class="grid grid-cols-5 px-[10%] mb-[25px]">
-				<div class="grid col-start-1 col-end-3">
-					<ul class="flex flex-col gap-5">
-						<h3 class="text-[28px]">Spellon</h3>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Nort West, South New Work,United State</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">+1 246-254-0569</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Info@example.com</a>
+			<div class="grid mb-[20px] px-[10%] 2lg:grid-cols-2 lg:grid-cols-5">
+				<div class="grid lg:col-start-1 lg:col-end-3">
+					<ul
+						class="flex flex-col mb-[10px] text-[#FFFFFF7F] gap-1 text-center items-center text-xs 3xm:text-sm 2xm:text-base lg:text-left lg:items-start lg:gap-y-5 ">
+						<h3 class="text-lg text-white 2xm:text-xl md:text-2xl">Spellon</h3>
+						<a class="" href="#">Nort West, South New Work,United State</a>
+						<a class="" href="#">+1 246-254-0569</a>
+						<a class="" href="#">Info@example.com</a>
+						<svg width="94" height="15" viewBox="0 0 94 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M7.62891 8.62524L8.01172 6.10962H5.57812V4.46899C5.57812 3.75806 5.90625 3.10181 7 3.10181H8.12109V0.94165C8.12109 0.94165 7.10938 0.750244 6.15234 0.750244C4.15625 0.750244 2.84375 1.98071 2.84375 4.16821V6.10962H0.601562V8.62524H2.84375V14.7502H5.57812V8.62524H7.62891ZM43.0938 0.968994C39.3477 0.968994 36.3125 4.03149 36.3125 7.75024C36.3125 11.4963 39.3477 14.5315 43.0938 14.5315C46.8125 14.5315 49.875 11.4963 49.875 7.75024C49.875 4.03149 46.8125 0.968994 43.0938 0.968994ZM47.5508 4.11353C48.3711 5.0979 48.8633 6.35571 48.8633 7.7229C48.6719 7.66821 46.7578 7.2854 44.8438 7.53149C44.6797 7.14868 44.543 6.82056 44.3242 6.38306C46.4844 5.50806 47.4414 4.27759 47.5508 4.11353ZM46.9219 3.42993C46.8125 3.59399 45.9375 4.76978 43.8867 5.5354C42.9297 3.7854 41.8906 2.36353 41.7266 2.14478C43.5586 1.70728 45.5 2.17212 46.9219 3.42993ZM40.6055 2.52759C40.7695 2.74634 41.8086 4.16821 42.7656 5.89087C40.0586 6.60181 37.6797 6.60181 37.4062 6.57446C37.7891 4.79712 38.9922 3.29321 40.6055 2.52759ZM37.2969 7.77759C37.2969 7.7229 37.2969 7.66821 37.2969 7.58618C37.543 7.61353 40.3594 7.64087 43.2305 6.76587C43.4219 7.09399 43.5586 7.42212 43.7227 7.75024C41.6172 8.35181 39.7031 10.0471 38.7734 11.6331C37.8438 10.6213 37.2969 9.25415 37.2969 7.77759ZM39.5117 12.344C40.1406 11.1135 41.7812 9.50024 44.1055 8.70728C44.9258 10.8127 45.2539 12.5901 45.3359 13.1096C43.4766 13.9026 41.2344 13.6838 39.5117 12.344ZM46.3203 12.5627C46.2656 12.2346 45.9375 10.5393 45.1992 8.43384C47.0039 8.1604 48.5898 8.62524 48.8086 8.67993C48.5352 10.2932 47.6055 11.6877 46.3203 12.5627ZM83.7812 7.25806C84.6289 6.82056 85.0938 6.19165 85.0938 5.23462C85.0938 3.29321 83.6445 2.82837 82.0039 2.82837H77.4375V12.5081H82.1133C83.8906 12.5081 85.5312 11.6604 85.5312 9.69165C85.5312 8.48853 84.957 7.58618 83.7812 7.25806ZM79.543 4.46899H81.5664C82.332 4.46899 83.0156 4.68774 83.0156 5.59009C83.0156 6.4104 82.4688 6.73853 81.7031 6.73853H79.543V4.46899ZM81.8398 10.8674H79.543V8.18774H81.8672C82.8242 8.18774 83.3984 8.5979 83.3984 9.58228C83.3984 10.5667 82.6875 10.8674 81.8398 10.8674ZM91.6289 4.27759V3.32056H87.7188V4.27759H91.6289ZM93.1875 9.11743C93.1875 7.03931 91.957 5.28931 89.7695 5.28931C87.6094 5.28931 86.1602 6.90259 86.1602 9.00806C86.1602 11.1956 87.5547 12.6995 89.7695 12.6995C91.4375 12.6995 92.5312 11.9338 93.0508 10.3479H91.3555C91.1641 10.9495 90.3984 11.2502 89.8242 11.2502C88.7031 11.2502 88.1016 10.594 88.1016 9.4729H93.1602C93.1602 9.36353 93.1875 9.22681 93.1875 9.11743ZM88.1016 8.24243C88.1562 7.34009 88.7852 6.76587 89.6875 6.76587C90.6719 6.76587 91.1641 7.31274 91.2461 8.24243H88.1016Z"
+								fill="#C4C4C4" />
+						</svg>
 					</ul>
 				</div>
-				<div>
-					<ul class="flex flex-col gap-5">
-						<h3 class="text-xl">Resources</h3>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Docs</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Forums</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Jobs</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Join Discord</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Consultants</a>
+				<div class="mb-[10px]">
+					<ul
+						class="flex flex-col text-[#FFFFFF7F]  gap-1 text-center text-xs 3xm:text-sm 2xm:text-base md:text-lg lg:gap-y-5">
+						<h3 class="text-base text-white 2xm:text-lg md:text-xl">Resources</h3>
+						<a class="" href="#">Docs</a>
+						<a class="" href="#">Forums</a>
+						<a class="" href="#">Jobs</a>
+						<a class="" href="#">Join Discord</a>
+						<a class="" href="#">Consultants</a>
 					</ul>
 				</div>
-				<div>
-					<ul class="flex flex-col gap-5">
-						<h3 class="text-xl">Company</h3>
-						<a class="text-base text-[#FFFFFF7F]" href="#">About Us</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Careers</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Block Chains</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Privacy Policy</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Terms & Condition</a>
+				<div class="mb-[10px]">
+					<ul
+						class="flex flex-col text-[#FFFFFF7F]  gap-1 text-center text-xs 3xm:text-sm 2xm:text-base md:text-lg lg:gap-y-5">
+						<h3 class="text-base text-white 2xm:text-lg md:text-xl">Company</h3>
+						<a class="" href="#">About Us</a>
+						<a class="" href="#">Careers</a>
+						<a class="" href="#">Block Chains</a>
+						<a class="" href="#">Privacy Policy</a>
+						<a class="" href="#">Terms & Condition</a>
 					</ul>
 				</div>
-				<div>
-					<ul class="flex flex-col gap-5">
-						<h3 class="text-xl">Legal</h3>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Terms of use</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Privacy policy</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">GDRP/CCPA explained</a>
-						<a class="text-base text-[#FFFFFF7F]" href="#">Guidlines</a>
+				<div class="mb-[10px]">
+					<ul
+						class="flex flex-col text-[#FFFFFF7F] gap-1 text-center text-xs 3xm:text-sm 2xm:text-base md:text-lg lg:gap-y-5">
+						<h3 class="text-base text-white 2xm:text-lg md:text-xl">Legal</h3>
+						<a class="" href="#">Terms of use</a>
+						<a class="" href="#">Privacy policy</a>
+						<a class="" href="#">GDRP/CCPA explained</a>
+						<a class="" href="#">Guidlines</a>
 					</ul>
 				</div>
 			</div>
-			<div class="flex flex-row justify-center items-center w-full bg-[rgba(15,9,55,0.5)] py-5 gap-2">
-				<img src="img/Vector.svg" alt="">
+			<div
+				class="flex flex-row justify-center items-center w-full text-xs 3xm:text-sm 2xm:text-base bg-[rgba(15,9,55,0.5)] py-5 gap-1 2xm:gap-2">
+				<img class="w-3 3xm:w-4 " src="img/Vector.svg" alt="">
 				<p class="">2021 Hello All right reserved.</p>
-			</div>
-		</div>
 	</footer>
 </body>
+<script>
+	var menu = document.getElementById('menu');
+	function toggleMenu() {
+		menu.classList.toggle('hidden');
+		menu.classList.toggle('w-full');
+		menu.classList.toggle('h-screen');
+	}
+</script>
 
 </html>
