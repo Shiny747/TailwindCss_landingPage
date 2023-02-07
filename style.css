@@ -552,6 +552,9 @@ video {
 .mb-\[40px\] {
   margin-bottom: 40px;
 }
+.mb-\[150px\] {
+  margin-bottom: 150px;
+}
 .mb-\[15px\] {
   margin-bottom: 15px;
 }
@@ -560,6 +563,9 @@ video {
 }
 .ml-\[10px\] {
   margin-left: 10px;
+}
+.mb-\[100px\] {
+  margin-bottom: 100px;
 }
 .mr-\[13px\] {
   margin-right: 13px;
@@ -689,6 +695,9 @@ video {
 .bg-\[url\(\'img\/Frame\.jpg\'\)\] {
   background-image: url('img/Frame.jpg');
 }
+.bg-cover {
+  background-size: cover;
+}
 .bg-center {
   background-position: center;
 }
@@ -792,8 +801,11 @@ video {
 .text-\[15px\] {
   font-size: 15px;
 }
-.text-\[14px\] {
-  font-size: 14px;
+.text-\[30px\] {
+  font-size: 30px;
+}
+.text-\[16px\] {
+  font-size: 16px;
 }
 .text-\[24px\] {
   font-size: 24px;
@@ -1011,8 +1023,8 @@ video {
     float: left;
   }
 
-  .lg\:mb-\[80px\] {
-    margin-bottom: 80px;
+  .lg\:mb-\[100px\] {
+    margin-bottom: 100px;
   }
 
   .lg\:mb-\[50px\] {
@@ -1033,6 +1045,10 @@ video {
 
   .lg\:w-\[500px\] {
     width: 500px;
+  }
+
+  .lg\:w-\[510px\] {
+    width: 510px;
   }
 
   .lg\:w-\[300px\] {
@@ -1132,6 +1148,10 @@ video {
     font-size: 20px;
   }
 
+  .lg\:text-\[18px\] {
+    font-size: 18px;
+  }
+
   .lg\:text-\[52px\] {
     font-size: 52px;
   }
@@ -1226,16 +1246,15 @@ video {
   .xm\:text-\[24px\] {
     font-size: 24px;
   }
-
-  .xm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
 }
 @media (max-width: 767px) {
 
   .\32md\:hidden {
     display: none;
+  }
+
+  .\32md\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .\32md\:py-\[10px\] {
@@ -1265,6 +1284,10 @@ video {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .\32md\:text-\[36px\] {
+    font-size: 36px;
+  }
 }
 @media (max-width: 1023px) {
 
@@ -1275,8 +1298,20 @@ video {
   .\32lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .\32lg\:text-center {
+    text-align: center;
+  }
 }
 @media (min-width: 1440px) {
+
+  .lgg\:mr-\[170px\] {
+    margin-right: 170px;
+  }
+
+  .lgg\:ml-\[170px\] {
+    margin-left: 170px;
+  }
 
   .lgg\:mb-\[0px\] {
     margin-bottom: 0px;
